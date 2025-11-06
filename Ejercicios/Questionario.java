@@ -1,3 +1,4 @@
+package Ejercicios;
 import java.util.Scanner;
 
 public class Questionario {
@@ -5,6 +6,10 @@ public class Questionario {
         System.out.println("Benvingut al qüestionari!");
 
         Scanner newscanner = new Scanner(System.in);
+
+        System.out.println("Com et dius?");
+        String nom = newscanner.nextLine();
+        System.out.println("Hola, benvingut al questionari " + nom + "!");
 
         System.out.println("Quin es el teu llenguatge de programacio preferit?");
         String resposta = newscanner.nextLine();

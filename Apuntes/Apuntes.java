@@ -1,3 +1,4 @@
+package Apuntes;
 import java.util.Scanner; // Per llegir dades de l'usuari
 
 class Main {
