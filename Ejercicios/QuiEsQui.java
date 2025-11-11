@@ -14,7 +14,7 @@ public class QuiEsQui {
         String pelo = sc.nextLine();
 
         String persona = "";
-        
+
         // equalsIgnoreCase compara textos sin importar si están en mayúsculas o minúsculas.
         // Por ejemplo: "H" y "h" serían iguales.
         if (genero.equalsIgnoreCase("H") && ojos.equalsIgnoreCase("marrones") && pelo.equalsIgnoreCase("rubio")) {
@@ -30,7 +30,7 @@ public class QuiEsQui {
         } else if (genero.equalsIgnoreCase("H") && ojos.equalsIgnoreCase("verdes") && pelo.equalsIgnoreCase("castaño")) {
             persona = "Juan";
         } else {
-            persona = "No se ha encontrado a nadie con esas características.";
+            persona = "No se ha encontrado a ninguna persona, vuelve a intentarlo.";
         }
 
         System.out.println("La persona es: " + persona);
