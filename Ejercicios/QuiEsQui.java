@@ -17,6 +17,7 @@ public class QuiEsQui {
 
         // equalsIgnoreCase compara textos sin importar si están en mayúsculas o minúsculas.
         // Por ejemplo: "H" y "h" serían iguales.
+        // anotherString variable que almacena el nombre de la persona identificada según las características ingresadas
         if (genero.equalsIgnoreCase("H") && ojos.equalsIgnoreCase("marrones") && pelo.equalsIgnoreCase("rubio")) {
             persona = "Luis";
         } else if (genero.equalsIgnoreCase("M") && ojos.equalsIgnoreCase("azules") && pelo.equalsIgnoreCase("moreno")) {
