@@ -32,31 +32,53 @@ public class Parquing {
         System.out.println("Introduce el tipo de estacionamiento (A/B/C): ");
         TiposEstacionamiento = sc.nextLine();
 
+        double total = 0;
+
+        int horas = 0;
+        if (TiposEstacionamiento.equals("A")) {
+            System.out.println("Introduce las horas de estacionamiento: ");
+            horas = sc.nextInt();
+        }
+
         if (TipusVehicle.equals("Coche")) {
-            if (TiposEstacionamiento.equals("A"))
+
+            if (TiposEstacionamiento.equals("A")) {
                 System.out.println("El precio es de 3€ por hora");
-            else if (TiposEstacionamiento.equals("B"))
-                // 15€ con 5% de descuento
+                total = horas * 3;
+
+            } else if (TiposEstacionamiento.equals("B")) { 
                 total = 15 - (15 * 0.05);
                 System.out.println("El precio final (con 5% de descuento) es de: " + total + "€");
-            else if (TiposEstacionamiento.equals("C"))
-                // 30€ con 5% de descuento
-               total = 30 - (30 * 0.05);
+
+            } else if (TiposEstacionamiento.equals("C")) { 
+                total = 30 - (30 * 0.05);
                 System.out.println("El precio final (con 5% de descuento) es de: " + total + "€");
-            else
+
+            } else {
                 System.out.println("Tipo de estacionamiento no válido");
+            }
         }
 
         if (TipusVehicle.equals("Moto")) {
-            if (TiposEstacionamiento.equals("A"))
+
+            if (TiposEstacionamiento.equals("A")) {
                 System.out.println("El precio es de 1€ por hora");
-            else if (TiposEstacionamiento.equals("B"))
+                total = horas * 1;
+
+            } else if (TiposEstacionamiento.equals("B")) {
                 System.out.println("El precio es de 5€");
-            else if (TiposEstacionamiento.equals("C"))
+                total = 5;
+
+            } else if (TiposEstacionamiento.equals("C")) {
                 System.out.println("El precio es de 10€");
-            else
+                total = 10;
+
+            } else {
                 System.out.println("Tipo de estacionamiento no válido");
+            }
         }
+
+        System.out.println("La matrícula " + matricula + " total a pagar = " + total + "€");
 
         sc.close();
     }
