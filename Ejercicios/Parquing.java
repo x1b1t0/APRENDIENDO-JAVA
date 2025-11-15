@@ -36,9 +36,13 @@ public class Parquing {
             if (TiposEstacionamiento.equals("A"))
                 System.out.println("El precio es de 3€ por hora");
             else if (TiposEstacionamiento.equals("B"))
-                System.out.println("El precio es de 15€ aplicando un 5% de descuento");
+                // 15€ con 5% de descuento
+                total = 15 - (15 * 0.05);
+                System.out.println("El precio final (con 5% de descuento) es de: " + total + "€");
             else if (TiposEstacionamiento.equals("C"))
-                System.out.println("El precio es de 30€ aplicando un 5% de descuento");
+                // 30€ con 5% de descuento
+               total = 30 - (30 * 0.05);
+                System.out.println("El precio final (con 5% de descuento) es de: " + total + "€");
             else
                 System.out.println("Tipo de estacionamiento no válido");
         }
