@@ -1,64 +1,171 @@
 package Apuntes;
-import java.util.Scanner;
 
 public class Bucles {
     // Aquí verás cómo utilizar bucles en Java
 
     public static void main(String[] args) {
 
-        // 🔁 Bucle while
-        // Explicación: El bucle while se utiliza cuando no sabes de antemano
-        // cuántas iteraciones quieres realizar.
-        // En este caso, imprimiremos los números del 1 al 5 utilizando un bucle while.
-        System.out.println("Este es el bucle while:");
-        int contador = 1;
-        while (contador <= 5) {
-            System.out.println("Aquest és el número (while): " + contador);
-            contador++;
-        }
+       /*
+    APUNTES DE CONDICIONALES EN JAVA
+    --------------------------------
 
-        // 🔁 Bucle for
-        // Explicación: El bucle for se utiliza cuando sabes de antemano cuántas
-        // iteraciones quieres realizar.
-        // En este caso, imprimiremos los números del 1 al 5 utilizando un bucle for.
-        System.out.println("Este es el bucle for:");
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Aquest és el número (for): " + i);
-        }
+    Los condicionales permiten que un programa tome decisiones.
+    En Java, las estructuras condicionales principales son:
 
-        // 🔁 Bucle do-while
-        // Explicación: El bucle do-while garantiza que el bloque de código se ejecuta
-        // al menos una vez antes de evaluar la condición.
-       System.out.println("Este es el bucle do-while:");
-        int numero = 1;
-        do {
-            System.out.println("Aquest és el número (do-while): " + numero);
-            numero++;
-        } while (numero <= 5);
+    1) if
+    2) if - else
+    3) if - else if - else
+    4) switch
+*/
 
-        // 🔁 Bucle foreach
-        // Explicación: El bucle foreach se utiliza para iterar sobre elementos de una
-        // colección o array.
-        System.out.println("Este es el bucle foreach:");
-        String[] noms = {"Anna", "Bernat", "Carla", "David", "Elena"};
-        for (String nom : noms) {
-            System.out.println("Nom: " + nom);
-        }
+/*------------------------------------------------------------
+    1) IF
+    Se ejecuta una instrucción SOLO si la condición es verdadera.
+-------------------------------------------------------------*/
 
-        // 🔁 Condicional if
-        // Explicación: Permite ejecutar diferentes bloques de código según una condición.
-        System.out.println("Este es un ejemplo de condicional if:");
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Quants anys tens? ");
-        int edat = scanner.nextInt();
-
-        if (edat < 18) {
-            System.out.println("Ets menor d'edat.");
-        } else {
-            System.out.println("Ets major d'edat.");
-        }
-
-        scanner.close();
-    }
+if (edad >= 18) {
+    System.out.println("Eres mayor de edad");
 }
 
+/*------------------------------------------------------------
+    2) IF - ELSE
+    Se ejecuta una acción si la condición es verdadera y otra si es falsa.
+-------------------------------------------------------------*/
+
+if (nota >= 5) {
+    System.out.println("Aprobado");
+} else {
+    System.out.println("Suspendido");
+}
+
+/*------------------------------------------------------------
+    3) IF - ELSE IF - ELSE
+    Permite evaluar múltiples condiciones en orden.
+-------------------------------------------------------------*/
+
+if (dia == 1) {
+    System.out.println("Lunes");
+} else if (dia == 2) {
+    System.out.println("Martes");
+} else if (dia == 3) {
+    System.out.println("Miércoles");
+} else {
+    System.out.println("Día no válido");
+}
+
+/*------------------------------------------------------------
+    OPERADORES DE COMPARACIÓN (muy usados en condicionales)
+    ---------------------------------------------------------
+    ==   igual
+    !=   distinto
+    >    mayor
+    <    menor
+    >=   mayor o igual
+    <=   menor o igual
+-------------------------------------------------------------*/
+
+/* Ejemplos */
+
+if (x == 10) { … }
+if (x != 5)  { … }
+if (x > 7)   { … }
+
+/*------------------------------------------------------------
+    OPERADORES LÓGICOS (para unir varias condiciones)
+    ---------------------------------------------------------
+    &&    AND (y)
+    ||    OR  (o)
+    !     NOT (niega la condición)
+-------------------------------------------------------------*/
+
+/* Ejemplos */
+
+if (edad >= 18 && edad <= 65) {
+    System.out.println("Edad laboral");
+}
+
+if (dia == 6 || dia == 7) {
+    System.out.println("Es fin de semana");
+}
+
+if (!llueve) {
+    System.out.println("Puedes salir sin paraguas");
+}
+
+/*------------------------------------------------------------
+    4) SWITCH
+    Ideal cuando tienes muchas opciones según un mismo valor.
+-------------------------------------------------------------*/
+
+switch (opcion) {
+    case 1:
+        System.out.println("Has elegido 1");
+        break;
+
+    case 2:
+        System.out.println("Has elegido 2");
+        break;
+
+    case 3:
+        System.out.println("Has elegido 3");
+        break;
+
+    default:
+        System.out.println("Opción no válida");
+        break;
+}
+
+/*------------------------------------------------------------
+    REGLAS IMPORTANTES
+-------------------------------------------------------------
+    - Las condiciones SIEMPRE deben dar como resultado true o false.
+    - Los bloques se abren con { } (obligatorio si hay varias instrucciones).
+    - En switch se usa "break" para evitar que siga ejecutando cases.
+-------------------------------------------------------------*/
+
+/*------------------------------------------------------------
+    EJEMPLOS PRÁCTICOS
+-------------------------------------------------------------*/
+
+// Ejemplo 1
+int numero = 7;
+
+if (numero % 2 == 0) {
+    System.out.println("Es par");
+} else {
+    System.out.println("Es impar");
+}
+
+// Ejemplo 2
+String tipo = "Coche";
+
+if (tipo.equals("Coche")) {
+    System.out.println("Tiene 4 ruedas");
+} else if (tipo.equals("Moto")) {
+    System.out.println("Tiene 2 ruedas");
+} else {
+    System.out.println("Tipo desconocido");
+}
+
+// Ejemplo 3 con switch
+char letra = 'A';
+
+switch (letra) {
+    case 'A':
+        System.out.println("Has pulsado la A");
+        break;
+
+    case 'B':
+        System.out.println("Has pulsado la B");
+        break;
+
+    default:
+        System.out.println("Letra no reconocida");
+        break;
+}
+
+/*
+=============================================================
+                    FIN DE LOS APUNTES
+=============================================================
+*/

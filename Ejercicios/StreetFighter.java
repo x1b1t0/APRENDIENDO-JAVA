@@ -22,6 +22,8 @@ public class StreetFighter {
             
             } else if (movimiento.equals("KICK_KEY")){
 
+            } else if (movimiento.equals("JOYSTICK_LEFT/RIGHT")) {
+
             
             }
             
