@@ -14,14 +14,14 @@ public class StreetFighter {
 
         if (estadoactual.equals("JUMPING")) {
             
-            } else if movimiento.equals("TOUCH_FLOOR") {
+            } else if (movimiento.equals("TOUCH_FLOOR") {
             
             } else if (movimiento.equals("PUNCH_KEY")) {
             
             } else if (movimiento.equals("JOYSTICK_CENTER) {
             
-            } else if (movimiento.equals("KICK_KEY")){
-
+            } else if (movimiento.equals("KICK_KEY")) {
+            
             } else if (movimiento.equals("JOYSTICK_LEFT/RIGHT")) {
 
             
